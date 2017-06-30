@@ -18,4 +18,4 @@
 >--
 >The deployed site can be viewed [here](http://submariner-tubing-73212.netlify.com/).
 >--
->&#169 WillisCode | Credit [Moringa School](http://moringaschool.com/)
+>(c) WillisCode | Credit [Moringa School](http://moringaschool.com/)
