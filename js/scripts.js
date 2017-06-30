@@ -1,5 +1,4 @@
-// var apiKey = require('./../.env').apiKey;
-var apiKey = "1d2c105357c360a3715c3c653c1c0641820e0033";
+var apiKey = require('./../.env').apiKey;
 // console.log(userInput);
 UserProfile = function() {
 };
@@ -9,7 +8,7 @@ UserProfile.prototype.getProfile = function(userInput) {
    $.get('https://api.github.com/users/' + userInput + '?access_token=' + apiKey).then(function(response) {
     // console.log(response);
     $.get('https://api.github.com/users/' + userInput +'/repos').then(function(repository) {
-      
+
     })
     $('#profile').html(`
       <div class="row">

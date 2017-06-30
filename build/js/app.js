@@ -9,6 +9,9 @@ UserProfile = function() {
 UserProfile.prototype.getProfile = function(userInput) {
    $.get('https://api.github.com/users/' + userInput + '?access_token=' + apiKey).then(function(response) {
     // console.log(response);
+    $.get('https://api.github.com/users/' + userInput +'/repos').then(function(repository) {
+      
+    })
     $('#profile').html(`
       <div class="row">
         <div class="col-md-3" id="user-image">
