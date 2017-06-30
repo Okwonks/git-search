@@ -1,0 +1,18 @@
+{
+  "name": "git-search",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Okwonks <albertoketch@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
