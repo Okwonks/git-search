@@ -1,0 +1,5 @@
+#img-border {
+  border: 5px solid white;
+  padding: 2%;
+  box-shadow: 2px 2px 2px 2px #b3b3b3;
+}

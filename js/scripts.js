@@ -1,5 +1,4 @@
 var apiKey = require('./../.env').apiKey;
-// var apiKey = "1d2c105357c360a3715c3c653c1c0641820e0033";
 // console.log(userInput);
 UserProfile = function() {};
 
@@ -36,13 +35,17 @@ UserProfile.prototype.getProfile = function(userInput) {
     $('#profile').html(`
       <div class="row">
         <div class="col-md-3" id="user-image">
-          <img class="img-responsive" src="${response.avatar_url}" alt="user-image" title="${response.name}">
+          <div id="img-border">
+            <img class="img-responsive" src="${response.avatar_url}" alt="user-image" title="${response.name}">
+          </div>
           <hr>
           <h4>User Bio</h4>
           <p>${response.bio}<p>
           <hr>
           <span class="label label-primary">Followers ${response.followers}</span>
           <span class="label label-primary">Following ${response.following}</span>
+          <hr>
+          <span class="label label-success">Created at: ${response.created_at}</span>
         </div>
         <div class="col-md-6">
           <h3>User Details</h3>

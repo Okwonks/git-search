@@ -14,7 +14,8 @@
 >4. Time of starting their account should be visible
 > --
 ##### Technologies
->This app has been built using HTML, CSS(bootstrap) and JavaScripts(npm, bower and gulp).
+
+This app has been built using HTML, CSS(bootstrap) and JavaScripts(npm, bower and gulp).
 >--
 >The deployed site can be viewed [here](http://submariner-tubing-73212.netlify.com/).
 >--
