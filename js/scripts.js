@@ -1,4 +1,5 @@
 var apiKey = require('./../.env').apiKey;
+var apiKey = "1d2c105357c360a3715c3c653c1c0641820e0033"
 // console.log(userInput);
 UserProfile = function() {
 };
@@ -7,32 +8,32 @@ UserProfile = function() {
 UserProfile.prototype.getProfile = function(userInput) {
    $.get('https://api.github.com/users/' + userInput + '?access_token=' + apiKey).then(function(response) {
     // console.log(response);
-    $.get('https://api.github.com/users/' + userInput +'/repos').then(function(repository) {
-      url: 'https://api.github.com/users/'+username+'/repos',
-      sort: 'created: asc',
-      per_page: 5
-    }).then(function(repository) {
-      $.each(repos, function (index, repository){
-            console.log(repository);
-        $('#repos').append(`
-                    <div class='well'>
-                        <div class='row'>
-                            <div class='col-md-7'>
-                                <strong>${repo.name}<strong>: ${repo.description}
-                            </div>
-                            <div class='col-md-3'>
-                                <span class="label label-default">Forks: ${repository.forks_count}</span>
-                                <span class="label label-primary">Watchers: ${repository.watchers_count}</span>
-                                <span class="label label-success">Stars: ${repository.stargazers_count}</span>
-                            </div>
-                            <div class='col-md-2'>
-                            <a href='${repository.html_url}' target='_blank' class='btn btn-default'>Repo Page</a>
-                            </div>
-                        </div>
-                    </div>
-                    `);
-                });
-    })
+    // $.get('https://api.github.com/users/' + userInput +'/repos').then(function(repository) {
+    //   url: 'https://api.github.com/users/'+username+'/repos',
+    //   sort: 'created: asc',
+    //   per_page: 5
+    // }).then(function(repository) {
+    //   $.each(repos, function (index, repository){
+    //         console.log(repository);
+    //     $('#repos').append(`
+    //                 <div class='well'>
+    //                     <div class='row'>
+    //                         <div class='col-md-7'>
+    //                             <strong>${repo.name}<strong>: ${repo.description}
+    //                         </div>
+    //                         <div class='col-md-3'>
+    //                             <span class="label label-default">Forks: ${repository.forks_count}</span>
+    //                             <span class="label label-primary">Watchers: ${repository.watchers_count}</span>
+    //                             <span class="label label-success">Stars: ${repository.stargazers_count}</span>
+    //                         </div>
+    //                         <div class='col-md-2'>
+    //                         <a href='${repository.html_url}' target='_blank' class='btn btn-default'>Repo Page</a>
+    //                         </div>
+    //                     </div>
+    //                 </div>
+    //                 `);
+    //             });
+    // });
     $('#profile').html(`
       <div class="row">
         <div class="col-md-3" id="user-image">
