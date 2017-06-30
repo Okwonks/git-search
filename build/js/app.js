@@ -11,7 +11,7 @@ UserProfile.prototype.getProfile = function(userInput) {
     // console.log(response);
     $('#profile').html(`
       <div class="row">
-        <div class="col-md-3">
+        <div class="col-md-3" id="user-image">
           <img class="img-responsive" src="${response.avatar_url}" alt="user-image" title="${response.name}">
           <hr>
           <h4>User Bio</h4>
